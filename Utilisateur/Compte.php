@@ -134,7 +134,7 @@ if(isset($_SESSION['utilisateur'])) {
                             else if(isset($infos['ville'])) echo "value=\"".$infos['ville']."\" ";  // ou affichage de la valeur enregistrée ?>
                         /> </td></tr>
                 <tr><td>telephone :</td>
-                    <td><input type="text" pattern="(+33|0)[0-9]{9}" name="telephone"
+                    <td><input type="text" pattern=" ^(\+33|0)[0-9]{9}$" name="telephone"
                             <?php if(isset($_POST['telephone'])) echo "value=\"".$_POST['telephone']."\" "; // maintient de la valeur déjà fournie
                             else if(isset($infos['telephone'])) echo "value=\"".$infos['telephone']."\" ";  // ou affichage de la valeur enregistrée ?>
                         /> </td></tr>
